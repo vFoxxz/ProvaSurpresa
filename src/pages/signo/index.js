@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import './index.scss'
+import { CalcularSigno } from '../../services'
 
 export default function Index() {
 
@@ -13,12 +14,8 @@ export default function Index() {
 )
 
     function Calcular(){
-        if(dia>=23 && mes==="setembro" || dia <=22 && mes==="outubro"){
-            setSigno("Sim")
-        }
-        else{
-            setSigno("Não") 
-        }
+        let resp = CalcularSigno(dia.toFixed([0]), mes)
+        setSigno(resp)
     }
 
     return(
@@ -27,7 +24,7 @@ export default function Index() {
 
             <div>Mês (somente texto) <input type='text' value={mes} onChange={e => setMes(e.target.value)} /></div>
 
-            <div>Dia <input type='number' value={dia} onChange={e => setDia(Number(e.target.value))} /></div>
+            <div>Dia <input type='number' min="1" max="31" value={dia} onChange={e => setDia(Number(e.target.value))} /></div>
 
             <div> É de signo de libra ? {signo}</div>
         </main>
