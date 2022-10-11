@@ -46,6 +46,7 @@ export default function Acai() {
             </div>
             <div>
               <img src='/assets/images/copo-de-acai.png' />
+              a
             </div>
         </main>
     )
