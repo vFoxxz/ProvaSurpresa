@@ -24,7 +24,7 @@ export default function Index() {
 )
 
     return(
-        <main>
+        <main className="sim">
             <h1>Sorveteria</h1>
             <div>
             Valor Gramas  <input type='number' value={gramas} onChange={e => setGramas(Number(e.target.value))} />

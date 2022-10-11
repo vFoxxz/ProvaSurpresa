@@ -42,8 +42,10 @@ export default function Acai() {
               % Desconto <input type='number'  value={desc} onChange={e => setDesc(Number(e.target.value))} />
             </div>
             <div>
-                <button onClick={Calcular}> Total </button> 
                 {total}
+            </div>
+            <div>
+              <img src='/assets/images/copo-de-acai.png' />
             </div>
         </main>
     )

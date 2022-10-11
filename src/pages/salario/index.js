@@ -19,9 +19,13 @@ export default function Salario(){
         }
     }
 
+    useEffect(() => {
+        CalcularSalarios()
+    }, [salarioBase, bonus, desconto])
+
     return(
-        <main>
-            <h1> teste </h1>
+        <main className='sim'>
+            <h1> Salário </h1>
 
             <div>
             Salário base <input type='number' min={0} value={salarioBase} onChange={e => setSalarioBase(e.target.value)} />
@@ -34,7 +38,7 @@ export default function Salario(){
             </div>
 
             <div>
-               <button onClick={CalcularSalarios}> Salário </button> {total}
+              {total}
             </div>
         </main>
     )

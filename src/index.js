@@ -7,7 +7,8 @@ import Signo from './pages/signo'
 import Sorveteria from './pages/sorveteria'
 import Salario from './pages/salario';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Paradas from './pages/paradas';
+import Temperatura from './pages/febre';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,8 @@ root.render(
       <Route path='/signo'   element={<Signo/>} />
       <Route path='/sorveteria'   element={<Sorveteria/>} />
       <Route path='/salario' element = {<Salario/>}/>
+      <Route path='/paradas' element = {<Paradas/>}/>
+      <Route path='/temperatura' element = {<Temperatura/>}/>
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

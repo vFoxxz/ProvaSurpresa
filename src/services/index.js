@@ -7,7 +7,7 @@ export function CalcularAcai (peq, med, grand, desc){
             throw new Error('Não foi possivel realizar a compra')
         }
         
-        if(Number.isInteger(peq) == false || Number.isInteger(med) == false || Number.isInteger(grand) == false) throw new Error('Somente Valores Inteiros')
+        if(Number.isInteger(peq) === false || Number.isInteger(med) === false || Number.isInteger(grand) === false) throw new Error('Somente Valores Inteiros')
        
         if(peq >= 0 || med >=0 || grand >= 0 ){
             let soma = peq * 13.50 + med  * 15 + grand * 17.50
@@ -54,9 +54,62 @@ export function CalcularSalario (salarioBase, bonus, desconto){
     if(salarioBase <= 0){
         throw new Error("Digíte um salário válido")
     }
-    if(salarioBase > 0 || bonus > 0 || desconto > 0 ){
+    
         let bonos = salarioBase * bonus / 100;
         let soma = salarioBase - desconto + bonos
         return soma
+    
+}
+
+export function CalcularParada(capac, consumo, dist) {
+
+    try {   
+        let resultado = ''
+        let litros = dist / consumo
+        let paradas = litros / capac
+
+        paradas = Math.ceil(paradas)
+
+        if(paradas>1){
+         resultado = 'Você precisará fazer ' + paradas + ' paradas para abastecer'
+        }
+        
+        else if(paradas===1) {
+            resultado = 'Você precisará fazer ' + paradas + ' parada para abastecer'
+        }
+         if(capac <= 0 || dist <= 0 || consumo <= 0) {
+            resultado = 'Valores Inválidos'
+        }
+        return resultado
+    } catch (err) {
+        return (err.message)
+    }
+}
+
+export function CalcularTemp(temp) {
+
+    try {   
+        let resultado = ''
+        if(temp>=41){
+         resultado = 'A situação da sua temperatura é Hipertemia'
+        }
+        else if(temp>=39.6 && temp<41) {
+            resultado = 'A situação da sua temperatura é Febre Alta'
+        }
+        else if(temp>=37.6 && temp<39.6) {
+            resultado = 'A situação da sua temperatura é Febre'
+        }
+        else if(temp>=36 && temp<37.6) {
+            resultado = 'A situação da sua temperatura é Febre Normal'
+        }
+        else if(temp>=32 && temp<36) {
+            resultado = 'A situação da sua temperatura é Hipotermia'
+        }
+        else if(temp < 32) {
+            resultado = 'Você faleceu'
+        }
+        return resultado
+    } catch (err) {
+        return (err.message)
     }
 }
