@@ -12,6 +12,8 @@ export default function Index() {
                 <Link to='/signo'>Signo</Link>
                 <br/>
                 <Link to='/sorveteria'>Sorveteria</Link>
+                <br/>
+                <Link to='/salario'> Salario </Link>
             </div>
         </main>
     )
