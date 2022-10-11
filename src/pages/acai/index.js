@@ -21,6 +21,9 @@ export default function Acai() {
       }
         
     }
+    useEffect(() =>{
+      Calcular()
+  }, [qtdP, qtdM, qtdG])
 
     return(
         <main className="sim">
