@@ -49,3 +49,14 @@ export function calcularPrecoGrama (gramas){
         return total
     }
 }
+
+export function CalcularSalario (salarioBase, bonus, desconto){
+    if(salarioBase <= 0){
+        throw new Error("Digíte um salário válido")
+    }
+    if(salarioBase > 0 || bonus > 0 || desconto > 0 ){
+        let bonos = salarioBase * bonus / 100;
+        let soma = salarioBase - desconto + bonos
+        return soma
+    }
+}
