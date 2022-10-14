@@ -10,8 +10,10 @@ export default function Index() {
                 <Link to='/acai' className="botoes">Açai</Link>
                 <Link to='/signo' className="botoes">Signo</Link>
                 <Link to='/salario' className="botoes"> Salario </Link>
+                <Link to='/cinema' className="botoes"> Cinema </Link>
                 <Link to='/paradas' className="botoes"> Paradas </Link>
                 <Link to='/sorveteria' className="botoes">Sorveteria</Link>
+                <Link to='/orcamento' className="botoes"> Orçamento </Link>
                 <Link to='/temperatura' className="botoes"> Temperatura </Link>
             </div>
         </main>

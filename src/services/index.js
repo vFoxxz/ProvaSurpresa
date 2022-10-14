@@ -113,3 +113,51 @@ export function CalcularTemp(temp) {
         return (err.message)
     }
 }
+
+export function OrcamentoFamiliar (ganhos, gastos) {
+    let porcentagemGastos = gastos / ganhos * 100
+    let msg = ''
+    if(ganhos === 0 && gastos === 0){
+        throw new Error('Ta quebrado hein cria')
+    }
+    else if(ganhos < 0 || gastos < 0) {
+        msg = 'Valores Inválidos'
+    }
+    else if(porcentagemGastos <= 20) {
+        msg = 'Parabéns, está gerenciando bem os seus gastos!'
+    }
+    else if(porcentagemGastos <= 50  ) {
+        msg = 'Muito bem, seus gastos não ultrapassam a metade do orçamento!'
+    }
+    else if(porcentagemGastos <= 80  ) {
+        msg = 'Atenção, melhor conter os gastos!'
+    }
+    else if(porcentagemGastos <= 100  ) {
+        msg = 'Cuidado, seu orçamento pode ficar comprometido!'
+    }
+    else if(porcentagemGastos > 100  ) {
+        msg = 'Orçamento comprometido, hora de rever os gastos!'
+    }
+    return msg
+}
+
+export function Cinemas (inteiras, meias, diaSemana, nacional){
+    let msg ='O total a se pagar é de R$'
+    let total = 0;
+    
+    if(nacional === true ){
+        total = (inteiras + meias) * 5
+        return msg + total
+    }
+
+    else if(diaSemana === 'Quarta-feira'){
+        total = (inteiras + meias) * 14.25
+        return msg + total
+    }
+
+    else{
+        total = (inteiras * 28.5) + (meias * 14.25)
+        return msg + total
+    }
+
+}

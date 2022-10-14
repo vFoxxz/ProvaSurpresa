@@ -45,7 +45,7 @@ export default function Acai() {
                 {total}
             </div>
             <div>
-              <img src='/assets/images/copo-de-acai.png' />
+              <img src='/assets/images/copo-de-acai.png' />h
               a
             </div>
         </main>
