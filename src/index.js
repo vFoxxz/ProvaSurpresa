@@ -11,6 +11,10 @@ import Paradas from './pages/paradas';
 import Temperatura from './pages/febre';
 import Orcamento from './pages/orcamento'
 import Cinema from './pages/cinema'
+import Numeros from './pages/numero'
+import Linha from './pages/linha'
+import Retangulo from './pages/retangulo'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -25,6 +29,10 @@ root.render(
       <Route path='/temperatura' element = {<Temperatura/>}/>
       <Route path='/orcamento' element = {<Orcamento/>}/>
       <Route path='/cinema' element = {<Cinema/>}/>
+      <Route path='/numero' element = {<Numeros/>}/>
+      <Route path='/linha' element = {<Linha/>}/>
+      <Route path='/retangulo' element = {<Retangulo/>}/>
+  
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

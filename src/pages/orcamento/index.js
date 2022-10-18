@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './index.scss'
-import{ CalcularParada, OrcamentoFamiliar } from '../../services/index.js'
+import{OrcamentoFamiliar } from '../../services/index.js'
 
 export default function Paradas(){
     const[gastos, setGastos] = useState(0)

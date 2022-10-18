@@ -8,10 +8,13 @@ export default function Index() {
 
             <div className="div-home">
                 <Link to='/acai' className="botoes">Açai</Link>
+                <Link to='/linha' className="botoes">Linha</Link>
                 <Link to='/signo' className="botoes">Signo</Link>
-                <Link to='/salario' className="botoes"> Salario </Link>
+                <Link to='/salario' className="botoes"> Salário </Link>
                 <Link to='/cinema' className="botoes"> Cinema </Link>
                 <Link to='/paradas' className="botoes"> Paradas </Link>
+                <Link to='/numero' className="botoes"> Números </Link>
+                <Link to='/retangulo' className="botoes"> Retangulo </Link>
                 <Link to='/sorveteria' className="botoes">Sorveteria</Link>
                 <Link to='/orcamento' className="botoes"> Orçamento </Link>
                 <Link to='/temperatura' className="botoes"> Temperatura </Link>

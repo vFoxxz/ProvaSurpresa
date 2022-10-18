@@ -161,3 +161,34 @@ export function Cinemas (inteiras, meias, diaSemana, nacional){
     }
 
 }
+
+export function Contar (inicio, fim){
+    if(isNaN(inicio) || isNaN(fim)) throw new Error('Isso não é um número!') 
+    if(!inicio || !fim) {
+        throw new Error('Coloque o numero ai meu rei')
+    }
+    let array = []
+    for(let i= inicio; i<=fim; i++){
+        array = [...array,i]
+    }
+    return array
+}
+export function DesenharLinha (qntd){
+    if(isNaN(qntd)) throw new Error('Isso não é número!') 
+    if(!qntd) {
+        throw new Error('Coloque o numero ai meu rei')
+    }
+    let array = []
+    for (let i = 0; i < qntd; i++) { 
+        array[i] = ("*"); 
+    } 
+    return array
+}
+
+export function DesenharRetangulo (altura, largura){
+    if(largura === altura)
+    if(isNaN(altura) || isNaN(largura)) throw new Error('Isso não é um número!') 
+    if(!altura || !largura) {
+        throw new Error('Coloque o numero ai meu rei')
+    }
+}
