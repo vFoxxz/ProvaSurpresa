@@ -1,5 +1,4 @@
 
-
 export function CalcularAcai (peq, med, grand, desc){
 
 
@@ -185,10 +184,68 @@ export function DesenharLinha (qntd){
     return array
 }
 
-export function DesenharRetangulo (altura, largura){
-    if(largura === altura)
-    if(isNaN(altura) || isNaN(largura)) throw new Error('Isso não é um número!') 
-    if(!altura || !largura) {
+export function DesenharRetangulo (base, altura){
+    if(isNaN(altura) || isNaN(base)) throw new Error('Isso não é um número!') 
+    if(!altura || !base) {
         throw new Error('Coloque o numero ai meu rei')
     }
+    let array = [];
+    for(let i = 0; i < altura; i++){
+        array=[...array,[]]
+    
+    for(let cont = 0; cont< base; cont++){
+        array[i].push("*  ")
+    }
+}
+
+return array
+
+
+}
+export function DesenharBolinha (base, altura){
+    if(isNaN(altura) || isNaN(base)) throw new Error('Isso não é um número!') 
+    if(!altura || !base) {
+        throw new Error('Coloque o numero ai meu rei')
+    }
+    let array = [];
+    for(let i = 0; i < altura; i++){
+        array=[...array,[]]
+    
+    for(let cont = 0; cont< base; cont++){
+        array[i].push("°  ")
+    }
+}
+
+return array
+
+
+}
+export function DesenharFoto (base, altura){
+    if(isNaN(altura) || isNaN(base)) throw new Error('Isso não é um número!') 
+    if(!altura || !base) {
+        throw new Error('Coloque o numero ai meu rei')
+    }
+    let array = [];
+    for(let i = 0; i < altura; i++){
+        array=[...array,[]]
+    
+    for(let cont = 0; cont< base; cont++){
+        array[i].push('')
+    }
+}
+
+return array
+
+
+}
+
+export function CalcularCafe(estudante,recipiente,mililitros){
+    if(estudante,recipiente,mililitros === 0 ) throw new Error("Digíte os números")
+    let L = (estudante * mililitros ) / 1000;
+    let teste = L/recipiente;
+    let final = Math.ceil(teste) * recipiente
+ 
+    return final
+
+   
 }

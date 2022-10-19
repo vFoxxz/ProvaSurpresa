@@ -7,6 +7,7 @@ export default function Index() {
             <h1>Home</h1>
 
             <div className="div-home">
+                <Link to='/cafe' className="botoes"> Café </Link>
                 <Link to='/acai' className="botoes">Açai</Link>
                 <Link to='/linha' className="botoes">Linha</Link>
                 <Link to='/signo' className="botoes">Signo</Link>

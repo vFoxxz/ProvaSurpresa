@@ -14,7 +14,7 @@ import Cinema from './pages/cinema'
 import Numeros from './pages/numero'
 import Linha from './pages/linha'
 import Retangulo from './pages/retangulo'
-
+import Cafe from './pages/cafe'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -32,7 +32,7 @@ root.render(
       <Route path='/numero' element = {<Numeros/>}/>
       <Route path='/linha' element = {<Linha/>}/>
       <Route path='/retangulo' element = {<Retangulo/>}/>
-  
+      <Route path='/cafe' element = {<Cafe/>}/>  
     </Routes>
     </BrowserRouter>
   </React.StrictMode>

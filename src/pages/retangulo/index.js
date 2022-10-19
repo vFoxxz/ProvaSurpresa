@@ -1,22 +1,27 @@
 import { useEffect, useState } from 'react'
 import './index.scss'
-import{ DesenharRetangulo } from '../../services/index.js'
+import{ DesenharRetangulo, DesenharBolinha, DesenharFoto } from '../../services/index.js'
 
 export default function Paradas(){
     const[largura, setLargura] = useState(0)
     const[altura, setAltura] = useState(0)
     const[total, setTotal] = useState([])
+    const[bolinha,setBolinha] = useState([])
+    const[imagem, setImagem] = useState([])
 
     function CalcularNumeros (){
         try {
-            const final = DesenharRetangulo(altura, largura)
+            const final = DesenharRetangulo(largura, altura)
             setTotal(final)
+            const bolinhas = DesenharBolinha(largura,altura) 
+            setBolinha(bolinhas)
+            const fotos = DesenharFoto(largura,altura)
+            setImagem(fotos)
         } catch (err) {
             setTotal(err.message)
         }
-    }
-
-    
+        
+    }  
    
     
 
@@ -34,9 +39,32 @@ export default function Paradas(){
             </div>
             
             <div>
-            {total}
+            {total.map(item =>
+            
+            <div>
+                {item}
             </div>
                 
+            )}
+
+            {bolinha.map(item =>
+                <div>
+                    {item}
+                </div>
+                
+                )}
+            </div>
+
+            {imagem.map(item=>
+                
+                <div>
+                    {item}
+                </div>
+            
+            )}
+                
+            
+
         </main>
     )
 }   
