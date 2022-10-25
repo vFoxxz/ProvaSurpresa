@@ -249,3 +249,34 @@ export function CalcularCafe(estudante,recipiente,mililitros){
 
    
 }
+
+export function JurosCompostos (entrada, valor, taxa, periodo) {
+    if(entrada, valor, taxa, periodo === undefined || entrada, valor, taxa, periodo === isNaN){
+        throw new Error("insira valores válidos")
+    }
+
+
+
+
+    let capital = valor - entrada
+    let montante = capital * ((1 + (taxa / 100)) ** periodo)
+    let juros = montante - capital
+    let vlparcela = montante / (periodo * 12)
+    let array = ['Montante: ' + montante.toFixed([2]),
+    'Juros: ' + juros.toFixed([2]),
+    'Valor da parcela: ' + vlparcela.toFixed([2])]
+    return array
+}
+
+export function ContarAlunos (fim){
+    if(isNaN(fim)) throw new Error('Isso não é um número!') 
+    if(!fim) {
+        throw new Error('Coloque o numero ai meu rei')
+    }
+    let array = []
+    for(let i = 1; i<=fim; i++){
+        array = [...array,i]
+    }
+    return array
+}
+
