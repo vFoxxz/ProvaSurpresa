@@ -267,16 +267,41 @@ export function JurosCompostos (entrada, valor, taxa, periodo) {
     'Valor da parcela: ' + vlparcela.toFixed([2])]
     return array
 }
-
-export function ContarAlunos (fim){
-    if(isNaN(fim)) throw new Error('Isso não é um número!') 
-    if(!fim) {
-        throw new Error('Coloque o numero ai meu rei')
+export function criarArray(tamanho) {
+    let notas = [];
+    for (let volta = 1; volta <= tamanho; volta++) {
+        notas.push(0);
     }
-    let array = []
-    for(let i = 1; i<=fim; i++){
-        array = [...array,i]
-    }
-    return array
+    return notas;
 }
 
+export function calcMedia(notas) {
+    let soma = 0;
+    for (let volta = 0; volta < notas.length; volta++) {
+        soma = soma + notas[volta];
+    }
+    let m = soma / notas.length;
+    return m;
+}
+
+export function calcMaior(notas) {
+    let m = 0;
+    for (let volta = 0; volta < notas.length; volta++) {
+        if (notas[volta] > m) {
+            m = notas[volta];
+        }
+    }
+    
+    return m;
+}
+
+export function calcMenor(notas) {
+    let m = 11;
+    for (let volta = 0; volta < notas.length; volta++) {
+        if (notas[volta] < m) {
+            m = notas[volta];
+        }
+    }
+    
+    return m;
+}
